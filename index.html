@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Server Form</h1>
+    </header>
+    <main>
+        <form id="webhookForm">
+            <div class="input-group">
+                <label for="serverName">Server Name:</label>
+                <input type="text" id="serverName" name="serverName" required placeholder="Enter your server name...">
+            </div>
+            <div class="input-group">
+                <label for="serverRegion">Server Region:</label>
+                <input type="text" id="serverRegion" name="serverRegion" required placeholder="Enter your server region...">
+            </div>
+            <div class="input-group">
+                <label for="serverPurpose">Server Purpose:</label>
+                <textarea id="serverPurpose" name="serverPurpose" rows="4" required placeholder="Describe the purpose of your server..."></textarea>
+            </div>
+            <div class="input-group">
+                <label for="serverRules">Server Rules:</label>
+                <textarea id="serverRules" name="serverRules" rows="4" required placeholder="List the rules of your server..."></textarea>
+            </div>
+            <div class="input-group">
+                <label for="discordUsername">Discord Username:</label>
+                <input type="text" id="discordUsername" name="discordUsername" required placeholder="Enter your Discord username...">
+            </div>
+            <button type="submit">Send to Discord</button>
+        </form>
+        <div id="successPopup" class="popup">Webhook sent successfully!</div>
+        <div id="errorPopup" class="popup">Failed to send webhook. Please try again later.</div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
